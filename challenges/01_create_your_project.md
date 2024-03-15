@@ -16,10 +16,8 @@ This project will use a few components:
   of software someone else has written to help others build programs. In Python
   these dependencies are known as packages.
 
-* **Pipenv**  
-  A tool for managing the environments in which Python programs run. An
-  environment includes the version of Python, the packages installed, and the
-  versions of those packages.
+* **Venv**  
+  A tool for managing the environments in which Python stores its libraries. A virtual environment (venv) includes the version of Python, the packages installed, and the versions of those packages.
 
 * **Pytest**  
   A test framework for use with Python. A test framework is a tool for writing

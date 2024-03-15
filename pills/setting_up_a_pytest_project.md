@@ -16,28 +16,37 @@ practice.
 Before we start you will need a few prerequisites. You may have installed these
 before, but we'll check that they are all there to be sure you are set up well.
 
+If you need reminding about these steps, what `pip` and `venv` are, or how to manage your dependencies - [refer back to this guide on package management with `pip` and `venv`.](https://github.com/makersacademy/python_foundations/blob/main/chapter1/challenges/package_management.md)
+
 ```shell
 # Let's install pyenv, a tool to manage different versions of Python.
 # This will ensure we have the latest Python, which has more readable error messages.
-; brew install pyenv
+brew install pyenv
 # You may be given some extra instructions at the end of the command.
 # If you are, follow them. If not, keep going.
 
 # Now we'll install the latest Python.
-; pyenv install 3.11
+pyenv install 3.12
 
-# And let's check to see if it is properly installed
-; pipenv --version
-# If you see "pipenv, version ..." then you can skip the rest of this
-# code block and go to the next one.
+# And let's check to see if pip is properly installed
+pip3 --version
+# If you see "pip 24.X from /Users/..." then you can skip the next command.
 
 # Otherwise, run these:
-; python3 -m ensurepip --upgrade
-; pip3 install --user pipenv
-; echo 'export PATH="$PATH:$(python3 -m site --user-base)/bin" # Add Pipenv to PATH' >> ~/.zshrc
-; source ~/.zshrc
-; pipenv --version
-pipenv, version ...
+python3 -m ensurepip --upgrade
+
+# Create a venv for this project and activate it
+python3 -m venv golden_square_venv
+source golden_square_venv/bin/activate
+
+# If you have cloned this Golden Square repo 
+# you should see a `requirements.txt` file
+# Use it to install the necessary packages
+
+(golden_square_venv) pip install -r requirements.txt
+
+# If you can't see the requirements.txt file you can just install the libraries manually too.
+(golden_square_venv) pip install pytest pytest-cov requests
 
 # If you run into trouble here, contact your coach.
 ```
@@ -48,25 +57,29 @@ To set up a new pytest project:
 
 ```shell
 # First, create a directory for your project
-; mkdir your-project-directory
-; cd your-project-directory
+mkdir your-project-directory
+cd your-project-directory
 
-# Next, install pytest using pipenv
-; pipenv install pytest --python 3.11
+# Create a venv for this project and activate it
+python3 -m venv my_project_venv
+source my_project_venv/bin/activate
+
+# Next, install pytest using pip
+(my_project_venv) pip install pytest 
 # This may take a few minutes
 
 # Create a folder for your testing files
-; mkdir tests
-; mkdir lib
+(my_project_venv) mkdir tests
+(my_project_venv) mkdir lib
 
 # Create module init files in both `tests/` and `lib/` directories
-; touch tests/__init__.py
-; touch lib/__init__.py
+(my_project_venv) touch tests/__init__.py
+(my_project_venv) touch lib/__init__.py
 # These might seem pointless, but they're important for Python to find
 # all of your files.
 
 # Verify your setup by running pytest
-; pipenv run pytest
+(my_project_venv) pytest
 ================================ test session starts ================================
 platform darwin -- Python 3.1, pytest-7.2.0, pluggy-1.0.0
 rootdir: .../your-project-directory
@@ -75,40 +88,21 @@ collected 0 items
 =============================== no tests ran in 0.01s ===============================
 
 # And create a repository for your changes
-; git init .
-; git add .
-; git commit -m "Project setup"
+(my_project_venv) git init .
+(my_project_venv) git add .
+(my_project_venv) git commit -m "Project setup"
 
 # Then go and create a repository on github.com
 # On the next screen after you have created the repository,
 # follow the "Push an existing repository from the command line" section
 # To push your project to your github repository
 # It will look something like this...
-; git remote add origin YOUR_REMOTE_ADDRESS
-; git branch -M main
-; git push -u origin main
+(my_project_venv) git remote add origin YOUR_REMOTE_ADDRESS
+(my_project_venv) git branch -M main
+(my_project_venv) git push -u origin main
 ```
 
-<details>
-  <summary>:speech_balloon: Running `pipenv run ...` all the time is annoying.</summary>
 
-  If you like, you can run `pipenv shell` at the start. This will enter you into
-  a special terminal environment where pipenv will make all of your dependencies
-  available.
-
-  ```shell
-  ; pipenv shell
-  Launching subshell in virtual environment...
-  . /.../virtualenvs/.../bin/activate
-  (pyv) ;  . /.../virtualenvs/.../bin/activate
-  (pyv) ; 
-  
-  # Now you can run `pytest` without `pipenv run` on the start.
-
-  (pyv) ; pytest
-  # ...
-  ```
-</details>
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

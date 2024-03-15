@@ -11,9 +11,6 @@ So that I can keep track of my tasks
 I want to check if a text includes the string `#TODO`.
 ```
 
-After you're done, as a pair filling out the form together (i.e. just one
-submission per pair), [submit your recording
-here.](https://airtable.com/shrvo9ePjlwnaiLv5?prefill_Item=gspy_as01)
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->
 

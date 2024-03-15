@@ -14,7 +14,7 @@ Here is a project to test your golden square skills overall:
 > So that I can verify that my order is correct  
 > I would like to see an itemised receipt with a grand total.
 
-Use the `twilio-python` package to implement this next one. You will need to use
+Use the `twilio-python` package to implement this next one. Install it to your `venv` with `pip install twilio-python`. You will need to use
 mocks too.
 
 > As a customer  

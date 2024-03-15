@@ -12,12 +12,31 @@ approach to building and testing terminal user-interfaces using mocking.
 How to get started:
 
 ```shell
-; pipenv install # To install dependencies
+# Make sure your venv is activated, then check the libraries
+(golden_square_venv) pip list
+# If you see the following then skip ahead
+Package            Version
+------------------ --------
+certifi            2024.2.2
+charset-normalizer 3.3.2
+coverage           7.4.2
+idna               3.6
+iniconfig          2.0.0
+packaging          23.2
+pip                24.0
+pluggy             1.4.0
+pytest             8.0.1
+pytest-cov         4.1.0
+requests           2.31.0
+urllib3            2.2.1
 
-; pipenv run pytest # All tests should pass
-; pipenv run pytest --cov lib # To see test coverage too
+# If not, or just to be sure run
+(golden_square_venv) pip install requests pytest pytest-cov # To install dependencies
 
-; pipenv run python run.py
+(golden_square_venv) pytest # All tests should pass
+(golden_square_venv) pytest --cov lib # To see test coverage too
+
+(golden_square_venv) python3 run.py
 # This will give you a few prompts and show you a board.
 ```
 

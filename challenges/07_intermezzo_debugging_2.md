@@ -61,7 +61,7 @@ In this exercise, you're going to use discovery debugging again for a more
 complex situation.
 
 Create a pytest project for the following two files and confirm that when you do
-`pipenv run pytest` the current unit tests are passing:
+`pytest` the current unit tests are passing:
 
 ```python
 # File: lib/vowel_remover.py

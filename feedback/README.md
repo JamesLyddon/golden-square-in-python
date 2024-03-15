@@ -10,7 +10,7 @@ module. You can use this evidence for a number of things:
 
 Some learning objectives (those relating to a _process_) can only properly be demonstrated by observation or video recording. For these...
 
-- [Follow the steps here](../pills/process_feedback_challenges.md)
+- [Follow the steps here](../pills/screen_recording.md)
 - Narrate / think out loud (and record sound)
 - Make sure your recording is *no more than 10 minutes*
 
@@ -27,10 +27,6 @@ Other learning objectives can be demonstrated without video, perhaps by some cod
 - Be sure to include a short reflection on your work
 - Leave a question or two for your coach
 
-## Submitting Your Evidence
-
-[Use this form](https://airtable.com/appJ1wvInmFyFFYlN/shrqrPYqq91RhN3Pn)
-
 ## But... how do I know when to record a video?
 
 You'll be working on code throughout the module - keep the learning objectives
@@ -42,6 +38,10 @@ time to record something demonstrating the first objective!
 If you don't yet understand what one of the objectives is about, that's OK,
 it'll relate to a part of the curriculum you haven't got to yet. They'll be
 obvious when you get there.
+
+## Submitting Your Evidence
+
+[Use this form](https://airtable.com/appJ1wvInmFyFFYlN/shrqrPYqq91RhN3Pn)
 
 ## Learning Objectives and Examples
 
